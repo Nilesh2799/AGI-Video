@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AGI Glaspac – Leading Container Glass Manufacturer in India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<!-- fallback for Clash Display -->
+<style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap');</style>
+<style>
+:root{
+  --red:#C8102E;
+  --red-dark:#9e0c22;
+  --red-glow:rgba(200,16,46,0.18);
+  --gold:#c9a84c;
+  --gold-light:#e8c97a;
+  --white:#ffffff;
+  --off:#f5f3ef;
+  --text:#1a1a1a;
+  --muted:#6b6b6b;
+  --border:rgba(0,0,0,0.09);
+  --glass-bg:rgba(255,255,255,0.06);
+  --glass-border:rgba(255,255,255,0.14);
+  --dark:#0d0d0d;
+  --dark2:#141414;
+  --dark3:#1c1c1c;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Manrope','Outfit',sans-serif;background:var(--dark);color:var(--white);overflow-x:hidden}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#000}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px}
+
+/* ── UTILS ── */
+.container{max-width:1280px;margin:0 auto;padding:0 2rem}
+h1,h2,h3,h4{font-family:'Outfit','Clash Display',sans-serif;letter-spacing:-0.02em}
+.section{padding:7rem 0}
+.section-light{background:var(--off);color:var(--text)}
+.section-dark{background:var(--dark2)}
+.section-darker{background:var(--dark)}
+
+.tag{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  border:1px solid rgba(200,16,46,0.4);background:rgba(200,16,46,0.08);
+  border-radius:999px;padding:0.3rem 1rem;
+  font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--red);
+  font-weight:600;margin-bottom:1.25rem;
+}
+.tag::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--red)}
+
+/* ── SCROLL REVEAL ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0}
+.reveal.in{animation:fadeUp 0.75s ease forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}
+.d4{animation-delay:.35s}.d5{animation-delay:.45s}.d6{animation-delay:.55s}
+
+/* ── BUTTONS ── */
+.btn{
+  display:inline-flex;align-items:center;gap:0.55rem;
+  border-radius:999px;padding:.8rem 2rem;font-size:.88rem;font-weight:600;
+  cursor:pointer;text-decoration:none;transition:all .25s ease;border:none;
+  font-family:'Manrope',sans-serif;letter-spacing:0.02em;
+}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 12px 32px rgba(200,16,46,0.35)}
+.btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.25)}
+.btn-outline:hover{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.45)}
+.btn-outline-dark{background:transparent;color:var(--text);border:1px solid rgba(0,0,0,0.2)}
+.btn-outline-dark:hover{background:rgba(0,0,0,0.06)}
+.btn svg{transition:transform .25s}
+.btn:hover svg{transform:translateX(4px)}
+
+/* ─────────────────────────────────────────
+   NAV
+───────────────────────────────────────── */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  padding:1rem 2rem;transition:all .35s ease;
+}
+#nav.scrolled{
+  background:rgba(10,10,10,0.88);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.logo-hex{
+  width:38px;height:38px;
+  background:var(--red);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Outfit',sans-serif;font-weight:800;font-size:1rem;color:#fff;letter-spacing:-0.02em;
+  box-shadow:0 4px 16px rgba(200,16,46,0.4);
+}
+.logo-name{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;color:#fff;line-height:1}
+.logo-sub{font-size:.62rem;font-weight:400;color:rgba(255,255,255,0.45);letter-spacing:.08em;text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:.25rem}
+.nav-links a{
+  color:rgba(255,255,255,.65);font-size:.82rem;padding:.5rem 1rem;
+  border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;font-weight:500;
+}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-links .has-sub{position:relative}
+.nav-links .has-sub:hover .subnav{display:flex}
+.subnav{
+  display:none;flex-direction:column;
+  position:absolute;top:calc(100% + 8px);left:0;
+  background:rgba(15,15,15,.97);backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.1);border-radius:14px;
+  padding:.5rem;min-width:200px;z-index:300;
+  box-shadow:0 24px 48px rgba(0,0,0,.5);
+}
+.subnav a{font-size:.8rem;padding:.55rem 1rem;border-radius:8px;color:rgba(255,255,255,.65)}
+.subnav a:hover{color:#fff;background:rgba(200,16,46,.12)}
+.nav-contact{
+  display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.5);
+}
+.nav-contact a{color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.nav-contact a:hover{color:#fff}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,.8);border-radius:2px}
+.mobile-menu{
+  display:none;position:fixed;top:72px;left:1rem;right:1rem;
+  background:rgba(12,12,12,.97);backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.1);border-radius:18px;
+  padding:1rem;z-index:199;flex-direction:column;gap:3px;
+  max-height:80vh;overflow-y:auto;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:rgba(255,255,255,.7);font-size:.88rem;padding:.75rem 1rem;border-radius:10px;text-decoration:none;transition:all .2s;font-weight:500}
+.mobile-menu a:hover{color:#fff;background:rgba(200,16,46,.12)}
+@media(max-width:1100px){.nav-links{display:none}.hamburger{display:flex}}
+@media(max-width:640px){.nav-contact{display:none}}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero{
+  min-height:100svh;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background:#000;
+}
+/* Animated glass-like grid bg */
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 30%, rgba(200,16,46,.22) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 20% 70%, rgba(201,168,76,.1) 0%, transparent 60%),
+    linear-gradient(160deg, #0a0a0a 0%, #111 40%, #0d0d0d 100%);
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 90% 80% at 55% 35%, black 30%, transparent 80%);
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+.hero-orb{
+  position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;
+  animation:float 8s ease-in-out infinite;
+}
+.orb1{width:500px;height:500px;background:rgba(200,16,46,.18);top:-100px;right:-50px;animation-delay:0s}
+.orb2{width:350px;height:350px;background:rgba(201,168,76,.1);bottom:100px;left:-80px;animation-delay:3s}
+.orb3{width:250px;height:250px;background:rgba(200,16,46,.12);bottom:200px;right:200px;animation-delay:5s}
+
+/* Glass bottle illustration (SVG decorative) */
+.hero-visual{
+  position:absolute;right:6%;top:50%;transform:translateY(-50%);
+  width:340px;opacity:.18;pointer-events:none;
+}
+@keyframes rotateSlow{from{transform:translateY(-50%) rotate(0deg)}to{transform:translateY(-50%) rotate(360deg)}}
+.hero-ring{
+  position:absolute;right:4%;top:50%;transform:translateY(-50%);
+  width:420px;height:420px;border-radius:50%;
+  border:1px solid rgba(200,16,46,.15);
+  animation:rotateSlow 30s linear infinite;pointer-events:none;
+}
+.hero-ring::before{
+  content:'';position:absolute;inset:20px;border-radius:50%;
+  border:1px dashed rgba(201,168,76,.1);
+}
+
+.hero-content{
+  position:relative;z-index:10;padding:0 2rem 6rem;
+  max-width:1280px;margin:0 auto;width:100%;
+  padding-top:140px;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.75rem;
+  margin-bottom:1.75rem;
+}
+.eyebrow-pill{
+  background:rgba(200,16,46,.15);border:1px solid rgba(200,16,46,.3);
+  border-radius:999px;padding:.3rem .9rem;font-size:.72rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--red);
+}
+.eyebrow-line{width:40px;height:1px;background:rgba(255,255,255,.2)}
+
+.hero-h1{
+  font-size:clamp(2.8rem,6vw,5.8rem);font-weight:800;
+  line-height:.95;letter-spacing:-0.03em;margin-bottom:1.75rem;
+  max-width:780px;
+}
+.hero-h1 em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--red) 0%,#ff4d6a 50%,var(--gold) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-sub{
+  color:rgba(255,255,255,.6);font-size:1rem;line-height:1.75;
+  max-width:520px;margin-bottom:2.5rem;font-weight:400;
+}
+.hero-ctas{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:4rem}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(4,auto);gap:0;
+  border:1px solid rgba(255,255,255,.1);border-radius:18px;
+  background:rgba(255,255,255,.04);backdrop-filter:blur(12px);
+  width:fit-content;overflow:hidden;
+}
+.hstat{
+  padding:1.25rem 2rem;border-right:1px solid rgba(255,255,255,.07);
+  transition:background .2s;
+}
+.hstat:last-child{border-right:none}
+.hstat:hover{background:rgba(200,16,46,.06)}
+.hstat-num{font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;line-height:1;color:#fff}
+.hstat-label{font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.25rem;font-weight:500;letter-spacing:.04em}
+
+/* ─────────────────────────────────────────
+   MARQUEE / TICKER
+───────────────────────────────────────── */
+.ticker{
+  background:var(--red);padding:.7rem 0;overflow:hidden;
+  border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);
+}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-inner{
+  display:flex;gap:0;width:max-content;
+  animation:marquee 28s linear infinite;
+}
+.ticker-item{
+  white-space:nowrap;padding:0 2rem;font-size:.78rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.9);
+  border-right:1px solid rgba(255,255,255,.25);
+}
+.ticker-item:last-child{border-right:none}
+
+/* ─────────────────────────────────────────
+   ABOUT
+───────────────────────────────────────── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.about-img-wrap{
+  position:relative;border-radius:24px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(135deg,#1a0a0d 0%,#110a00 100%);
+  aspect-ratio:4/5;
+  display:flex;align-items:center;justify-content:center;
+}
+.about-img-inner{
+  display:flex;flex-direction:column;align-items:center;gap:1.5rem;
+  padding:2rem;text-align:center;
+}
+.about-years{
+  font-family:'Outfit',sans-serif;font-size:7rem;font-weight:900;
+  line-height:1;letter-spacing:-0.05em;
+  background:linear-gradient(135deg,var(--red),var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.about-years-label{font-size:.85rem;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase}
+.about-float-badge{
+  position:absolute;bottom:2rem;right:-1.5rem;
+  background:var(--gold);color:#1a1000;
+  border-radius:16px;padding:1.25rem 1.5rem;
+  font-family:'Outfit',sans-serif;font-weight:800;
+  box-shadow:0 16px 40px rgba(201,168,76,.35);
+}
+.badge-n{font-size:1.8rem;line-height:1}
+.badge-l{font-size:.72rem;margin-top:3px;opacity:.75;font-weight:600}
+.about-points{display:flex;flex-direction:column;gap:.85rem;margin-top:2.25rem}
+.apoint{
+  display:flex;align-items:flex-start;gap:.85rem;
+  padding:1.1rem 1.25rem;border-radius:14px;
+  border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);
+  transition:border-color .25s,background .25s;
+}
+.apoint:hover{border-color:rgba(200,16,46,.3);background:rgba(200,16,46,.05)}
+.apoint-icon{
+  width:38px;height:38px;border-radius:10px;flex-shrink:0;
+  background:rgba(200,16,46,.12);color:var(--red);
+  display:flex;align-items:center;justify-content:center;
+}
+.apoint h4{font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:700;margin-bottom:.2rem}
+.apoint p{font-size:.8rem;line-height:1.55;color:rgba(255,255,255,.55)}
+
+/* ─────────────────────────────────────────
+   PRODUCTS
+───────────────────────────────────────── */
+.products-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;gap:2rem;flex-wrap:wrap}
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.25rem;
+}
+.prod-card{
+  border-radius:20px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.07);
+  background:rgba(255,255,255,.03);
+  transition:all .3s ease;cursor:pointer;
+  position:relative;group:true;
+}
+.prod-card:hover{border-color:rgba(200,16,46,.35);transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,.4)}
+.prod-img{
+  width:100%;aspect-ratio:1.1;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#111 0%,#1a1a1a 100%);
+}
+.prod-icon-wrap{
+  width:80px;height:80px;
+  transition:transform .3s ease;
+}
+.prod-card:hover .prod-icon-wrap{transform:scale(1.1)}
+.prod-body{padding:1.25rem}
+.prod-name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:.35rem}
+.prod-desc{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.5}
+.prod-arrow{
+  display:flex;align-items:center;gap:.35rem;margin-top:.85rem;
+  color:var(--red);font-size:.75rem;font-weight:600;
+  transition:gap .2s;
+}
+.prod-card:hover .prod-arrow{gap:.6rem}
+
+/* Product color dots */
+.color-strip{display:flex;gap:5px;margin-top:.75rem}
+.cdot{width:12px;height:12px;border-radius:50%;border:1px solid rgba(255,255,255,.2)}
+
+/* ─────────────────────────────────────────
+   SUSTAINABILITY (light section)
+───────────────────────────────────────── */
+.sustain-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-top:3.5rem}
+.sustain-card{
+  border-radius:22px;padding:2.5rem 2rem;
+  border:1px solid var(--border);
+  background:#fff;
+  transition:all .3s;
+}
+.sustain-card:hover{box-shadow:0 20px 48px rgba(0,0,0,.1);transform:translateY(-4px)}
+.sustain-num{
+  font-family:'Outfit',sans-serif;font-size:3.5rem;font-weight:900;
+  line-height:1;margin-bottom:1rem;
+  background:linear-gradient(135deg,var(--red),var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.sustain-title{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:.6rem}
+.sustain-desc{font-size:.85rem;color:var(--muted);line-height:1.65}
+.sustain-tag{
+  display:inline-flex;align-items:center;gap:.4rem;margin-bottom:1.5rem;
+  font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--red);
+}
+.sustain-tag::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--red)}
+
+/* ─────────────────────────────────────────
+   TIMELINE
+───────────────────────────────────────── */
+.timeline-wrap{position:relative;margin-top:4rem}
+.timeline-track{
+  position:absolute;top:28px;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(200,16,46,.4),var(--red),rgba(201,168,76,.5),transparent);
+}
+.timeline-scroll{overflow-x:auto;padding:0 1rem 2rem;scrollbar-width:thin;scrollbar-color:var(--red) transparent}
+.timeline-inner{display:flex;gap:0;min-width:max-content;position:relative;padding-top:60px}
+.t-item{
+  display:flex;flex-direction:column;align-items:center;
+  width:160px;flex-shrink:0;position:relative;
+}
+.t-dot{
+  position:absolute;top:-36px;left:50%;transform:translateX(-50%);
+  width:18px;height:18px;border-radius:50%;
+  background:var(--red);border:3px solid var(--dark2);
+  box-shadow:0 0 0 4px rgba(200,16,46,.25);
+  transition:transform .2s,box-shadow .2s;
+}
+.t-item:hover .t-dot{transform:translateX(-50%) scale(1.4);box-shadow:0 0 0 8px rgba(200,16,46,.2)}
+.t-year{
+  font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:800;
+  color:var(--red);margin-bottom:.5rem;
+}
+.t-text{font-size:.72rem;color:rgba(255,255,255,.5);text-align:center;line-height:1.5;padding:0 .5rem}
+
+/* ─────────────────────────────────────────
+   SERVICES
+───────────────────────────────────────── */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3.5rem}
+.svc-card{
+  padding:2rem;border-radius:20px;
+  border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);
+  transition:all .3s;
+}
+.svc-card:hover{border-color:rgba(200,16,46,.3);background:rgba(200,16,46,.04);transform:translateY(-4px)}
+.svc-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:rgba(200,16,46,.1);color:var(--red);
+  display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;
+}
+.svc-title{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.svc-desc{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* ─────────────────────────────────────────
+   PLANTS
+───────────────────────────────────────── */
+.plants-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.plant-card{
+  border-radius:22px;overflow:hidden;
+  border:1px solid var(--border);background:#fff;
+  transition:all .3s;
+}
+.plant-card:hover{box-shadow:0 20px 48px rgba(0,0,0,.12);transform:translateY(-4px)}
+.plant-map-thumb{
+  width:100%;height:160px;
+  background:linear-gradient(135deg,#e8e0d0,#d4c8b4);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.plant-map-thumb::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,rgba(200,16,46,.05) 0,rgba(200,16,46,.05) 1px,transparent 1px,transparent 14px),
+    repeating-linear-gradient(-45deg,rgba(200,16,46,.05) 0,rgba(200,16,46,.05) 1px,transparent 1px,transparent 14px);
+}
+.plant-pin{
+  width:44px;height:44px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);
+  background:var(--red);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 20px rgba(200,16,46,.4);
+}
+.plant-pin svg{transform:rotate(45deg);color:#fff}
+.plant-body{padding:1.5rem}
+.plant-name{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
+.plant-addr{font-size:.8rem;color:var(--muted);line-height:1.6}
+.plant-cap{
+  display:inline-flex;align-items:center;gap:.4rem;
+  margin-top:1rem;background:rgba(200,16,46,.08);
+  border:1px solid rgba(200,16,46,.2);border-radius:999px;
+  padding:.3rem .9rem;font-size:.72rem;font-weight:700;color:var(--red);
+}
+
+/* ─────────────────────────────────────────
+   TESTIMONIALS
+───────────────────────────────────────── */
+.testimonial-big{
+  border-radius:28px;padding:3.5rem;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.03);
+  margin-bottom:2rem;
+}
+.tquote{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:1.2rem;line-height:1.8;color:rgba(255,255,255,.85);
+  margin-bottom:2rem;position:relative;padding-left:2rem;
+}
+.tquote::before{
+  content:'"';position:absolute;left:0;top:-.5rem;
+  font-size:4rem;line-height:1;color:rgba(200,16,46,.3);
+  font-family:'Playfair Display',serif;
+}
+.t-author{display:flex;align-items:center;gap:1rem}
+.t-ava{
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(200,16,46,.12);border:2px solid rgba(200,16,46,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--red);
+  flex-shrink:0;
+}
+.t-name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:700}
+.t-org{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.15rem}
+
+/* ─────────────────────────────────────────
+   CLIENTS MARQUEE
+───────────────────────────────────────── */
+.clients-ticker{overflow:hidden;padding:3rem 0}
+.clients-inner{display:flex;width:max-content;animation:marquee 22s linear infinite}
+.client-chip{
+  white-space:nowrap;padding:.75rem 2rem;margin:0 .5rem;
+  border:1px solid rgba(255,255,255,.09);border-radius:12px;
+  background:rgba(255,255,255,.03);
+  font-family:'Outfit',sans-serif;font-weight:700;font-size:.85rem;
+  color:rgba(255,255,255,.5);transition:all .2s;
+}
+.client-chip:hover{color:#fff;border-color:rgba(200,16,46,.3);background:rgba(200,16,46,.05)}
+
+/* ─────────────────────────────────────────
+   CTA BANNER
+───────────────────────────────────────── */
+.cta-banner{
+  border-radius:28px;padding:5rem 4rem;
+  background:linear-gradient(135deg,#1a0308 0%,#0d0d0d 50%,#0d0008 100%);
+  border:1px solid rgba(200,16,46,.25);
+  text-align:center;position:relative;overflow:hidden;
+}
+.cta-banner::before{
+  content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);
+  width:600px;height:400px;border-radius:50%;
+  background:rgba(200,16,46,.08);filter:blur(80px);pointer-events:none;
+}
+.cta-banner h2{font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:800;margin-bottom:1rem}
+.cta-banner p{color:rgba(255,255,255,.6);font-size:1rem;max-width:500px;margin:0 auto 2.5rem;line-height:1.7}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:5rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:1.8fr repeat(3,1fr);gap:4rem;margin-bottom:4rem}
+.footer-brand p{color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.7;margin-top:.85rem;max-width:280px}
+.footer-col h4{
+  font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);margin-bottom:1.25rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-col ul li a{color:rgba(255,255,255,.4);font-size:.82rem;text-decoration:none;transition:color .2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:rgba(255,255,255,.3);font-size:.78rem}
+.socials{display:flex;gap:.6rem}
+.soc{
+  width:36px;height:36px;border-radius:9px;
+  border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.4);text-decoration:none;transition:all .2s;
+}
+.soc:hover{border-color:var(--red);color:var(--red);background:rgba(200,16,46,.08)}
+.contact-info{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}
+.contact-info a{color:rgba(255,255,255,.45);font-size:.8rem;text-decoration:none;display:flex;align-items:center;gap:.5rem;transition:color .2s}
+.contact-info a:hover{color:#fff}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media(max-width:1024px){
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .sustain-grid{grid-template-columns:1fr 1fr}
+  .plants-grid{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .hero-stats{grid-template-columns:repeat(2,auto)}
+  .hstat:nth-child(2){border-right:none}
+  .hstat:nth-child(3){border-top:1px solid rgba(255,255,255,.07)}
+}
+@media(max-width:768px){
+  .section{padding:4.5rem 0}
+  .products-grid{grid-template-columns:1fr 1fr}
+  .sustain-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .plants-grid{grid-template-columns:1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+  .products-intro{flex-direction:column}
+  .cta-banner{padding:3rem 1.5rem}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-ring,.hero-visual{display:none}
+  .hero-stats{grid-template-columns:repeat(2,1fr);width:100%}
+  .hstat{border-right:1px solid rgba(255,255,255,.07)!important;border-top:none!important}
+  .hstat:nth-child(2){border-right:none!important}
+  .hstat:nth-child(3){border-top:1px solid rgba(255,255,255,.07)!important}
+}
+@media(max-width:480px){
+  .products-grid{grid-template-columns:1fr}
+  .hero-h1{font-size:2.5rem}
+  .hero-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-hex">AG</div>
+      <div>
+        <div class="logo-name">AGI glaspac</div>
+        <div class="logo-sub">Container Glass Manufacturer</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <div class="has-sub"><a href="#products">Products ▾</a>
+        <div class="subnav">
+          <a href="#products">Beer Bottles</a>
+          <a href="#products">Liquor Bottles</a>
+          <a href="#products">Wine Bottles</a>
+          <a href="#products">Pharma Bottles</a>
+          <a href="#products">Food Jars</a>
+          <a href="#products">Soft Drink Bottles</a>
+          <a href="#products">Chemical Bottles</a>
+        </div>
+      </div>
+      <div class="has-sub"><a href="#services">Services ▾</a>
+        <div class="subnav">
+          <a href="#">ACL (Applied Ceramic Label)</a>
+          <a href="#">Colouring Forehearth</a>
+          <a href="#">Coating</a>
+          <a href="#">In-House Design Studio</a>
+          <a href="#">Mould Shop</a>
+        </div>
+      </div>
+      <a href="#sustainability">Sustainability</a>
+      <a href="#plants">Our Plants</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-contact" style="display:flex;align-items:center;gap:.75rem">
+      <div style="display:flex;flex-direction:column;gap:2px;font-size:.72rem;text-align:right">
+        <a href="tel:+914023831774">+91-40-23831774</a>
+        <a href="mailto:agi@agi-glaspac.com">agi@agi-glaspac.com</a>
+      </div>
+      <a href="#contact" class="btn btn-red" style="padding:.6rem 1.2rem;font-size:.78rem">Get Quote</a>
+    </div>
+    <button class="hamburger" id="ham" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mmenu">
+  <a href="#about">About Us</a>
+  <a href="#products">Products</a>
+  <a href="#services">Services</a>
+  <a href="#sustainability">Sustainability</a>
+  <a href="#plants">Our Plants</a>
+  <a href="#timeline">Our History</a>
+  <a href="#contact">Contact Us</a>
+  <a href="mailto:agi@agi-glaspac.com" style="color:var(--red)!important;font-weight:700">agi@agi-glaspac.com</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <!-- Background video -->
+  <video id="hero-video" autoplay loop playsinline
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity 1.4s ease">
+    <source src="https://res.cloudinary.com/da5iusasi/video/upload/v1778005110/magnific_core-direction-ultraphoto_2926650730_y4i9jz.mp4" type="video/mp4"/>
+  </video>
+
+  <!-- Mute / Unmute toggle -->
+  <button id="mute-btn" title="Toggle sound" style="
+    position:absolute;bottom:2rem;right:2rem;z-index:50;
+    display:flex;align-items:center;gap:.55rem;
+    background:rgba(0,0,0,0.45);backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.18);border-radius:999px;
+    padding:.6rem 1.2rem;cursor:pointer;
+    font-family:'Manrope',sans-serif;font-size:.78rem;font-weight:600;color:rgba(255,255,255,0.85);
+    transition:all .25s;">
+    <!-- Sound ON icon -->
+    <svg id="icon-sound-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+    </svg>
+    <!-- Muted icon (hidden by default) -->
+    <svg id="icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <line x1="23" y1="9" x2="17" y2="15"/>
+      <line x1="17" y1="9" x2="23" y2="15"/>
+    </svg>
+    <span id="mute-label">Mute</span>
+  </button>
+
+  <!-- Dark gradient overlay for text readability -->
+  <div style="position:absolute;inset:0;z-index:1;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.75) 100%)"></div>
+
+  <div class="hero-bg" id="hero-static-bg"></div>
+  <div class="hero-grid" id="hero-grid-el"></div>
+  <div class="hero-orb orb1" id="orb1"></div>
+  <div class="hero-orb orb2" id="orb2"></div>
+  <div class="hero-orb orb3" id="orb3"></div>
+  <div class="hero-ring" id="hero-ring-el"></div>
+
+  <!-- Decorative bottle SVG -->
+  <svg class="hero-visual" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M85 20 L85 60 Q60 80 50 120 L50 340 Q50 370 100 370 Q150 370 150 340 L150 120 Q140 80 115 60 L115 20 Z" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M85 20 L115 20 L115 10 Q100 5 85 10 Z" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M55 160 L145 160" stroke="white" stroke-width="1" opacity="0.4"/>
+    <path d="M52 200 Q100 195 148 200" stroke="white" stroke-width="1" opacity="0.3"/>
+    <path d="M52 240 Q100 235 148 240" stroke="white" stroke-width="1" opacity="0.3"/>
+    <path d="M52 280 Q100 275 148 280" stroke="white" stroke-width="1" opacity="0.3"/>
+    <circle cx="100" cy="100" r="8" stroke="white" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-pill">India's Leading Glass Manufacturer</div>
+      <div class="eyebrow-line"></div>
+      <span style="font-size:.72rem;color:rgba(255,255,255,.4);font-weight:500;letter-spacing:.06em">Est. 1972 · 40+ Years</span>
+    </div>
+
+    <h1 class="hero-h1">
+      Crafting Glass<br>That <em>Shapes</em><br>Every Industry.
+    </h1>
+    <p class="hero-sub">
+      From 5ml pharma vials to 4000ml food jars — AGI Glaspac is India's most trusted container glass manufacturer, serving Beer, Spirits, Wine, Pharma, Food & more.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#products" class="btn btn-red">
+        Explore Products
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-outline">Request a Quote</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-num">1,754</div>
+        <div class="hstat-label">Tonnes/Day Capacity</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">1,156</div>
+        <div class="hstat-label">Employees</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">₹2,100+Cr</div>
+        <div class="hstat-label">Annual Revenue</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">3</div>
+        <div class="hstat-label">Manufacturing Plants</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TICKER ── -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <div class="ticker-item">Beer Bottles</div>
+    <div class="ticker-item">Liquor Bottles</div>
+    <div class="ticker-item">Wine Bottles</div>
+    <div class="ticker-item">Pharma Bottles</div>
+    <div class="ticker-item">Food Jars</div>
+    <div class="ticker-item">Soft Drink Bottles</div>
+    <div class="ticker-item">Chemical Bottles</div>
+    <div class="ticker-item">Cosmetic Glass</div>
+    <div class="ticker-item">NNPB Technology</div>
+    <div class="ticker-item">In-House Design Studio</div>
+    <div class="ticker-item">ACL Services</div>
+    <div class="ticker-item">Colouring Forehearth</div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker-item">Beer Bottles</div>
+    <div class="ticker-item">Liquor Bottles</div>
+    <div class="ticker-item">Wine Bottles</div>
+    <div class="ticker-item">Pharma Bottles</div>
+    <div class="ticker-item">Food Jars</div>
+    <div class="ticker-item">Soft Drink Bottles</div>
+    <div class="ticker-item">Chemical Bottles</div>
+    <div class="ticker-item">Cosmetic Glass</div>
+    <div class="ticker-item">NNPB Technology</div>
+    <div class="ticker-item">In-House Design Studio</div>
+    <div class="ticker-item">ACL Services</div>
+    <div class="ticker-item">Colouring Forehearth</div>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section class="section section-dark" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal d1">
+        <div class="about-img-inner">
+          <div class="about-years">49</div>
+          <div class="about-years-label">Years of Excellence</div>
+          <p style="color:rgba(255,255,255,.35);font-size:.8rem;line-height:1.7;max-width:240px;text-align:center;margin-top:.5rem">
+            India's largest NNPB bottle manufacturer, pioneering container glass since 1972.
+          </p>
+        </div>
+        <div class="about-float-badge">
+          <div class="badge-n">GPTW</div>
+          <div class="badge-l">4th Consecutive Year</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tag reveal d1">About AGI Glaspac</div>
+        <h2 class="section-title reveal d2" style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.1;margin-bottom:1.25rem">
+          Technical knowledge.<br><span style="background:linear-gradient(135deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Half a century</span> of craft.
+        </h2>
+        <p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.75;margin-bottom:.5rem" class="reveal d3">
+          We manufacture glass containers under the brand AGI Glaspac to meet the stringent quality standards for packaging needs of food, pharmaceuticals, soft drinks, spirits, beer, wine and other industries.
+        </p>
+        <p style="color:rgba(255,255,255,.5);font-size:.85rem;line-height:1.75;margin-bottom:2rem" class="reveal d3">
+          Our product range varies from a small <strong style="color:#fff">5ml Pharma bottle</strong> to a <strong style="color:#fff">4,000ml chemical and food jar</strong>. With the addition of colouring forehearth technology at Bhongir, we can provide glass containers in various colours.
+        </p>
+
+        <div class="about-points">
+          <div class="apoint reveal d3">
+            <div class="apoint-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4>Largest NNPB Manufacturer in India</h4>
+              <p>Narrow Neck Press & Blow technology for superior strength and lightweight packaging.</p>
+            </div>
+          </div>
+          <div class="apoint reveal d4">
+            <div class="apoint-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h4>Stringent Quality Standards</h4>
+              <p>ISO 9000 certified since 1996. Every bottle undergoes rigorous quality checks before dispatch.</p>
+            </div>
+          </div>
+          <div class="apoint reveal d5">
+            <div class="apoint-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <h4>Global Exports</h4>
+              <p>Exporting since 2011 to global markets, trusted by international beverage and pharma brands.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCTS ── -->
+<section class="section section-darker" id="products">
+  <div class="container">
+    <div class="products-intro">
+      <div>
+        <div class="tag reveal d1">Product Solutions</div>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.1" class="reveal d2">
+          Glass solutions for<br><span style="background:linear-gradient(135deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">every industry</span>
+        </h2>
+      </div>
+      <p style="color:rgba(255,255,255,.5);font-size:.9rem;line-height:1.7;max-width:340px" class="reveal d3">
+        From concept to manufacture — our in-house design team supports bespoke glass packaging for niche products and global brands alike.
+      </p>
+    </div>
+
+    <div class="products-grid">
+      <!-- Beer -->
+      <div class="prod-card reveal d1">
+        <div class="prod-img">
+          <svg class="prod-icon-wrap" viewBox="0 0 80 120" fill="none">
+            <path d="M25 30 L25 90 Q25 105 40 105 Q55 105 55 90 L55 30 Z" stroke="rgba(201,168,76,0.6)" stroke-width="2" fill="rgba(201,168,76,0.06)"/>
+            <path d="M32 20 L48 20 L48 30 L32 30 Z" stroke="rgba(201,168,76,0.4)" stroke-width="2" fill="none"/>
+            <path d="M35 15 L45 15 L46 20 L34 20 Z" stroke="rgba(201,168,76,0.4)" stroke-width="2" fill="none"/>
+            <path d="M26 55 L54 55" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+            <path d="M26 65 L54 65" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+            <path d="M26 75 L54 75" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+          </svg>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,.08),transparent 70%)"></div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Beer Bottles</div>
+          <p class="prod-desc">14 different colours available. NNPB technology for lightweight, strong beer bottles trusted by global breweries.</p>
+          <div class="color-strip">
+            <div class="cdot" style="background:#c9a84c"></div>
+            <div class="cdot" style="background:#1a5c1a"></div>
+            <div class="cdot" style="background:#1a1a3a"></div>
+            <div class="cdot" style="background:#4a1a00"></div>
+            <div class="cdot" style="background:#eee"></div>
+          </div>
+          <div class="prod-arrow">
+            Learn More
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+      <!-- Liquor -->
+      <div class="prod-card reveal d2">
+        <div class="prod-img" style="background:linear-gradient(135deg,#1a0a0d,#0d0d1a)">
+          <svg class="prod-icon-wrap" viewBox="0 0 80 140" fill="none">
+            <path d="M30 30 L30 100 Q30 120 40 120 Q50 120 50 100 L50 30 Z" stroke="rgba(200,16,46,0.6)" stroke-width="2" fill="rgba(200,16,46,0.06)"/>
+            <path d="M34 10 L46 10 L48 30 L32 30 Z" stroke="rgba(200,16,46,0.4)" stroke-width="1.5" fill="none"/>
+            <path d="M37 5 L43 5 L44 10 L36 10 Z" stroke="rgba(200,16,46,0.4)" stroke-width="1.5" fill="none"/>
+            <path d="M31 60 L49 60" stroke="rgba(200,16,46,0.3)" stroke-width="1"/>
+            <path d="M31 75 L49 75" stroke="rgba(200,16,46,0.2)" stroke-width="1"/>
+          </svg>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(200,16,46,.1),transparent 70%)"></div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Liquor Bottles</div>
+          <p class="prod-desc">Wide variety of bottle shapes and decorative options. Premium aesthetics for spirits brands worldwide.</p>
+          <div class="color-strip">
+            <div class="cdot" style="background:#eee"></div>
+            <div class="cdot" style="background:#c9a84c"></div>
+            <div class="cdot" style="background:#1a1a3a"></div>
+            <div class="cdot" style="background:#2a1a00"></div>
+          </div>
+          <div class="prod-arrow">
+            Learn More
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+      <!-- Wine -->
+      <div class="prod-card reveal d3">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0d1a0a,#0a1400)">
+          <svg class="prod-icon-wrap" viewBox="0 0 80 150" fill="none">
+            <path d="M28 20 L52 20 Q55 50 55 70 Q55 95 40 95 Q25 95 25 70 Q25 50 28 20 Z" stroke="rgba(50,120,50,0.6)" stroke-width="2" fill="rgba(50,120,50,0.06)"/>
+            <path d="M40 95 L40 130" stroke="rgba(50,120,50,0.5)" stroke-width="2"/>
+            <path d="M32 130 L48 130" stroke="rgba(50,120,50,0.4)" stroke-width="2"/>
+            <path d="M36 15 L44 15 L44 20 L36 20 Z" stroke="rgba(50,120,50,0.4)" stroke-width="1.5" fill="none"/>
+          </svg>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(50,120,50,.1),transparent 70%)"></div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Wine Bottles</div>
+          <p class="prod-desc">Stunning custom carved wine bottles. From Bordeaux to Burgundy shapes — including premium antique finishes.</p>
+          <div class="color-strip">
+            <div class="cdot" style="background:#1a4a1a"></div>
+            <div class="cdot" style="background:#1a1a3a"></div>
+            <div class="cdot" style="background:#4a1a1a"></div>
+            <div class="cdot" style="background:#eee"></div>
+          </div>
+          <div class="prod-arrow">
+            Learn More
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+      <!-- Pharma -->
+      <div class="prod-card reveal d4">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0a1520,#050e18)">
+          <svg class="prod-icon-wrap" viewBox="0 0 80 100" fill="none">
+            <rect x="25" y="30" width="30" height="55" rx="6" stroke="rgba(100,160,255,0.6)" stroke-width="2" fill="rgba(100,160,255,0.06)"/>
+            <rect x="32" y="22" width="16" height="10" rx="3" stroke="rgba(100,160,255,0.4)" stroke-width="1.5" fill="none"/>
+            <path d="M32 50 L48 50" stroke="rgba(100,160,255,0.3)" stroke-width="1"/>
+            <path d="M32 60 L48 60" stroke="rgba(100,160,255,0.2)" stroke-width="1"/>
+          </svg>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(100,160,255,.08),transparent 70%)"></div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Pharma Bottles</div>
+          <p class="prod-desc">Medicinal-grade containers keeping products safe and protected. From 2.5ml vials to 500ml bottles.</p>
+          <div class="color-strip">
+            <div class="cdot" style="background:#eee"></div>
+            <div class="cdot" style="background:#c8e4ff"></div>
+            <div class="cdot" style="background:#c8a84c55"></div>
+          </div>
+          <div class="prod-arrow">
+            Learn More
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+      <!-- Food Jars -->
+      <div class="prod-card reveal d1">
+        <div class="prod-img" style="background:linear-gradient(135deg,#1a1200,#120e00)">
+          <svg class="prod-icon-wrap" viewBox="0 0 80 80" fill="none">
+            <ellipse cx="40" cy="65" rx="28" ry="8" stroke="rgba(255,180,50,0.5)" stroke-width="2" fill="rgba(255,180,50,0.05)"/>
+            <path d="M12 30 Q12 65 40 65 Q68 65 68 30 L68 26 Q68 20 40 20 Q12 20 12 26 Z" stroke="rgba(255,180,50,0.6)" stroke-width="2" fill="rgba(255,180,50,0.05)"/>
+            <rect x="22" y="14" width="36" height="8" rx="4" stroke="rgba(255,180,50,0.4)" stroke-width="1.5" fill="none"/>
+          </svg>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,180,50,.08),transparent 70%)"></div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Food Jars</div>
+          <p class="prod-desc">Keep your favourite foods fresh and tasty. Wide-mouth jars for sauces, pickles, jams, and condiments.</p>
+          <div class="color-strip">
+            <div class="cdot" style="background:#eee"></div>
+            <div class="cdot" style="background:#c9a84c"></div>
+            <div class="cdot" style="background:#a0c050"></div>
+          </div>
+          <div class="prod-arrow">
+            Learn More
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+      <!-- Soft Drink -->
+      <div class="prod-card reveal d2">
+        <div class="prod-img" style="background:linear-gradient(135deg,#001a0a,#001408)">
+          <svg class="prod-icon-wrap" viewBox="0 0 80 140" fill="none">
+            <path d="M33 25 L47 25 L52 50 L52 110 Q52 125 40 125 Q28 125 28 110 L28 50 Z" stroke="rgba(50,200,100,0.6)" stroke-width="2" fill="rgba(50,200,100,0.06)"/>
+            <path d="M37 15 L43 15 L44 25 L36 25 Z" stroke="rgba(50,200,100,0.4)" stroke-width="1.5" fill="none"/>
+            <path d="M29 70 L51 70" stroke="rgba(50,200,100,0.3)" stroke-width="1"/>
+            <path d="M29 85 L51 85" stroke="rgba(50,200,100,0.2)" stroke-width="1"/>
+          </svg>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(50,200,100,.08),transparent 70%)"></div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Soft Drink Bottles</div>
+          <p class="prod-desc">100% customizable for carbonated beverages. Trusted by Coca-Cola, PepsiCo, and Parle Agro.</p>
+          <div class="color-strip">
+            <div class="cdot" style="background:#eee"></div>
+            <div class="cdot" style="background:#1a6a1a"></div>
+            <div class="cdot" style="background:#1a3a6a"></div>
+          </div>
+          <div class="prod-arrow">
+            Learn More
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+      <!-- Chemical -->
+      <div class="prod-card reveal d3">
+        <div class="prod-img" style="background:linear-gradient(135deg,#1a1a00,#100f00)">
+          <svg class="prod-icon-wrap" viewBox="0 0 80 100" fill="none">
+            <path d="M20 30 L20 80 Q20 95 40 95 Q60 95 60 80 L60 30 Z" stroke="rgba(200,200,50,0.5)" stroke-width="2" fill="rgba(200,200,50,0.05)"/>
+            <rect x="28" y="20" width="24" height="12" rx="4" stroke="rgba(200,200,50,0.4)" stroke-width="1.5" fill="none"/>
+            <path d="M21 55 L59 55" stroke="rgba(200,200,50,0.3)" stroke-width="1"/>
+          </svg>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(200,200,50,.08),transparent 70%)"></div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Chemical Bottles</div>
+          <p class="prod-desc">All chemical bottles undergo stringent quality standard checks. Safe, robust, and precisely engineered.</p>
+          <div class="color-strip">
+            <div class="cdot" style="background:#eee"></div>
+            <div class="cdot" style="background:#c8c050"></div>
+            <div class="cdot" style="background:#506080"></div>
+          </div>
+          <div class="prod-arrow">
+            Learn More
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+      <!-- Cosmetic -->
+      <div class="prod-card reveal d4">
+        <div class="prod-img" style="background:linear-gradient(135deg,#1a001a,#100010)">
+          <svg class="prod-icon-wrap" viewBox="0 0 80 130" fill="none">
+            <path d="M32 35 L32 95 Q32 115 40 115 Q48 115 48 95 L48 35 Z" stroke="rgba(200,100,200,0.6)" stroke-width="2" fill="rgba(200,100,200,0.06)"/>
+            <ellipse cx="40" cy="20" rx="14" ry="16" stroke="rgba(200,100,200,0.4)" stroke-width="1.5" fill="none"/>
+            <path d="M33 60 L47 60" stroke="rgba(200,100,200,0.3)" stroke-width="1"/>
+          </svg>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(200,100,200,.08),transparent 70%)"></div>
+        </div>
+        <div class="prod-body">
+          <div class="prod-name">Cosmetic & Perfumery</div>
+          <p class="prod-desc">AGI Speciality Glas — nail polish, perfume, and premium cosmetics packaging with bespoke shapes.</p>
+          <div class="color-strip">
+            <div class="cdot" style="background:#eee"></div>
+            <div class="cdot" style="background:#c050c0"></div>
+            <div class="cdot" style="background:#c9a84c"></div>
+          </div>
+          <div class="prod-arrow">
+            Learn More
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SUSTAINABILITY ── -->
+<section class="section section-light" id="sustainability">
+  <div class="container">
+    <div style="max-width:640px">
+      <div class="tag reveal d1">Sustainability</div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.1;color:var(--text)" class="reveal d2">
+        Delivering innovation with <span style="color:var(--red)">purpose</span>
+      </h2>
+      <p style="color:var(--muted);font-size:.9rem;line-height:1.75;margin-top:.75rem" class="reveal d3">
+        Glass is inherently sustainable — 100% recyclable, infinitely. AGI Glaspac has invested heavily in environmental protection, natural gas implementation, and electrostatic precipitators to reduce SOX, NOX, and CO₂ emissions.
+      </p>
+    </div>
+
+    <div class="sustain-grid">
+      <div class="sustain-card reveal d1">
+        <div class="sustain-tag">Environment</div>
+        <div class="sustain-num">↓60%</div>
+        <div class="sustain-title">Reduced Carbon Footprint</div>
+        <p class="sustain-desc">Natural gas implementation since 2019 to curb carbon emissions. Electrostatic precipitators installed in 2016 to reduce SOX, NOX, and CO₂ significantly.</p>
+      </div>
+      <div class="sustain-card reveal d2">
+        <div class="sustain-tag">Health & Safety</div>
+        <div class="sustain-num">Zero</div>
+        <div class="sustain-title">Zero-Compromise Safety Policy</div>
+        <p class="sustain-desc">Safety is the highest priority at AGI Glaspac. Classified as a Major Accident Hazard (MAH) unit with all statutory approvals from relevant authorities.</p>
+      </div>
+      <div class="sustain-card reveal d3">
+        <div class="sustain-tag">Integrity</div>
+        <div class="sustain-num">4x</div>
+        <div class="sustain-title">Great Place to Work™ Certified</div>
+        <p class="sustain-desc">Certified as a Great Place to Work for 4 consecutive years — a testament to our commitment to employee wellbeing, integrity, and transparent governance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section section-dark" id="services">
+  <div class="container">
+    <div class="tag reveal d1">Our Services</div>
+    <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.1;max-width:560px" class="reveal d2">
+      End-to-end glass packaging <span style="background:linear-gradient(135deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">services</span>
+    </h2>
+    <div class="services-grid">
+      <div class="svc-card reveal d1">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="svc-title">Applied Ceramic Label (ACL)</div>
+        <p class="svc-desc">Permanent ceramic labelling directly on glass for superior branding durability — resistant to abrasion, water, and UV.</p>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+        </div>
+        <div class="svc-title">Colouring Forehearth Technology</div>
+        <p class="svc-desc">Produce glass containers in a wide range of colours directly from the furnace — offering great marketing advantages from a branding perspective.</p>
+      </div>
+      <div class="svc-card reveal d3">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="svc-title">In-House Design Studio</div>
+        <p class="svc-desc">Complete service for bespoke glass packaging — from initial concept to manufacture and decoration for niche products and big brands.</p>
+      </div>
+      <div class="svc-card reveal d4">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>
+        </div>
+        <div class="svc-title">Coating Services</div>
+        <p class="svc-desc">Cold end and hot end coatings for improved scratch resistance, surface protection, and enhanced aesthetics for premium packaging.</p>
+      </div>
+      <div class="svc-card reveal d5">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M12 8a4 4 0 0 0 0-8 4 4 0 0 0 0 8z" opacity=".4"/></svg>
+        </div>
+        <div class="svc-title">Mould Shop</div>
+        <p class="svc-desc">In-house mould manufacturing capability ensuring rapid turnaround for new bottle shapes — moulds ready in under 2 months for NPD launches.</p>
+      </div>
+      <div class="svc-card reveal d6">
+        <div class="svc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <div class="svc-title">Packaging Options</div>
+        <p class="svc-desc">Comprehensive packaging solutions including bulk pallet packaging, retail-ready options, and custom pack configurations for every need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ── -->
+<section class="section section-darker" id="timeline">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <div class="tag reveal d1" style="justify-content:center;margin:0 auto 1.25rem">Our History</div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.1" class="reveal d2">
+        Five decades of <span style="background:linear-gradient(135deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">glass innovation</span>
+      </h2>
+    </div>
+    <div class="timeline-wrap reveal d3">
+      <div class="timeline-track"></div>
+      <div class="timeline-scroll">
+        <div class="timeline-inner">
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">1972</div><p class="t-text">AGI Founded — 80 Tonnes/day capacity</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">1981</div><p class="t-text">HSIL acquires AGI, upgrades to 180 TPD</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">1996</div><p class="t-text">ISO 9000 Certification achieved</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">2000</div><p class="t-text">1st New Furnace (F-2) → 450 TPD capacity</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">2004</div><p class="t-text">2nd Furnace (F-3) → 600 TPD capacity</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">2009</div><p class="t-text">Bhongir Greenfield plant → 1,100 TPD</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">2011</div><p class="t-text">First exports begin</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">2012</div><p class="t-text">Largest single-location glass plant in Asia — 1,600 TPD</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">2016</div><p class="t-text">Electrostatic Precipitators for SOX, NOX, CO₂ reduction</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">2017</div><p class="t-text">TPM, LEAN & 6 SIGMA introduced</p></div>
+          <div class="t-item"><div class="t-dot"></div><div class="t-year">2019</div><p class="t-text">Natural Gas implementation to curb carbon emissions</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PLANTS ── -->
+<section class="section section-light" id="plants">
+  <div class="container">
+    <div class="tag reveal d1">Our Plants</div>
+    <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.1;color:var(--text);margin-bottom:.5rem" class="reveal d2">
+      Manufacturing<br><span style="color:var(--red)">across India</span>
+    </h2>
+    <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:0" class="reveal d3">
+      Strategically located plants ensuring supply reliability for clients across India and export markets.
+    </p>
+    <div class="plants-grid">
+      <div class="plant-card reveal d1">
+        <div class="plant-map-thumb">
+          <div class="plant-pin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+        </div>
+        <div class="plant-body">
+          <div class="plant-name">Central Office & Main Plant</div>
+          <p class="plant-addr">Glass Factory Road, Off Motinagar, Borabanda,<br>Hyderabad – 500018, India</p>
+          <div class="plant-cap">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Original Furnaces F-1, F-2, F-3
+          </div>
+        </div>
+      </div>
+      <div class="plant-card reveal d2">
+        <div class="plant-map-thumb">
+          <div class="plant-pin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+        </div>
+        <div class="plant-body">
+          <div class="plant-name">Bhongir Plant</div>
+          <p class="plant-addr">Glass Factory Road, Bhongir,<br>Nalagonda, Telangana – 508116, India</p>
+          <div class="plant-cap">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Largest Single-Location Plant in Asia
+          </div>
+        </div>
+      </div>
+      <div class="plant-card reveal d3">
+        <div class="plant-map-thumb">
+          <div class="plant-pin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+        </div>
+        <div class="plant-body">
+          <div class="plant-name">Mothighanapur Plant</div>
+          <p class="plant-addr">SY. No. 474 & 476, Mothighanapur,<br>Gangadharpally Village, Mahabubnagar – 509202</p>
+          <div class="plant-cap">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Crushing Plant
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIAL + CLIENTS ── -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="tag reveal d1">Testimonials</div>
+    <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.1;margin-bottom:3rem" class="reveal d2">
+      Trusted by global <span style="background:linear-gradient(135deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">industry leaders</span>
+    </h2>
+
+    <div class="testimonial-big reveal d3">
+      <p class="tquote">
+        My interaction with AGI as an Organisation & with its energetic team is since 2012 & it has been wonderful business partnership. The kind of customer focus, quality & service brought in by AGI was refreshing & different from conventional Indian Glass Industry. AGI supported our business requirement beyond expectation — getting a mould ready in less than 2 months to support Tuborg 3G launch.
+      </p>
+      <div class="t-author">
+        <div class="t-ava">PR</div>
+        <div>
+          <div class="t-name">Mr. Pran Raj</div>
+          <div class="t-org">Carlsberg Group</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clients marquee -->
+  <div class="clients-ticker">
+    <div class="clients-inner">
+      <div class="client-chip">GSK</div>
+      <div class="client-chip">Pfizer</div>
+      <div class="client-chip">Dr. Reddy's</div>
+      <div class="client-chip">Thermo Fisher</div>
+      <div class="client-chip">Coca-Cola</div>
+      <div class="client-chip">PepsiCo</div>
+      <div class="client-chip">Parle Agro</div>
+      <div class="client-chip">United Breweries</div>
+      <div class="client-chip">Bacardi</div>
+      <div class="client-chip">Pernod Ricard</div>
+      <div class="client-chip">Carlsberg</div>
+      <div class="client-chip">HUL</div>
+      <div class="client-chip">GSK</div>
+      <div class="client-chip">Pfizer</div>
+      <div class="client-chip">Dr. Reddy's</div>
+      <div class="client-chip">Thermo Fisher</div>
+      <div class="client-chip">Coca-Cola</div>
+      <div class="client-chip">PepsiCo</div>
+      <div class="client-chip">Parle Agro</div>
+      <div class="client-chip">United Breweries</div>
+      <div class="client-chip">Bacardi</div>
+      <div class="client-chip">Pernod Ricard</div>
+      <div class="client-chip">Carlsberg</div>
+      <div class="client-chip">HUL</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ── -->
+<section class="section section-darker" id="contact">
+  <div class="container">
+    <div class="cta-banner reveal d1">
+      <div class="tag" style="justify-content:center;margin:0 auto 1.5rem">Start a Conversation</div>
+      <h2>Ready to <em style="font-style:normal;background:linear-gradient(135deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">partner</em> with India's best?</h2>
+      <p>Whether you need standard containers or bespoke glass packaging, our team is ready to support from concept through delivery.</p>
+      <div class="cta-btns">
+        <a href="mailto:agi@agi-glaspac.com" class="btn btn-red">
+          agi@agi-glaspac.com
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="tel:+914023831774" class="btn btn-outline">+91-40-23831774</a>
+      </div>
+
+      <!-- Contact info grid -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;text-align:left" class="contact-cards">
+        <div style="padding:1.5rem;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(255,255,255,.03)">
+          <div style="font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:700;color:var(--red);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem">Central Office</div>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7">Glass Factory Road, Off Motinagar,<br>Borabanda, Hyderabad – 500018</p>
+        </div>
+        <div style="padding:1.5rem;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(255,255,255,.03)">
+          <div style="font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:700;color:var(--red);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem">Mumbai Office</div>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7">Town Centre 2, 307, 3rd Floor,<br>Marol, Andheri (E), Mumbai – 400059</p>
+        </div>
+        <div style="padding:1.5rem;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(255,255,255,.03)">
+          <div style="font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:700;color:var(--red);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem">Bhongir Plant</div>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.7">Glass Factory Road, Bhongir,<br>Nalagonda, Telangana – 508116</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="display:inline-flex">
+          <div class="logo-hex">AG</div>
+          <div>
+            <div class="logo-name">AGI glaspac</div>
+            <div class="logo-sub">Container Glass Manufacturer</div>
+          </div>
+        </a>
+        <p>Leading container glass bottle manufacturer in India since 1972. 1,754 tonnes/day capacity across 3 manufacturing plants.</p>
+        <div class="contact-info">
+          <a href="tel:+914023831774">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +91-40-23831774
+          </a>
+          <a href="mailto:agi@agi-glaspac.com">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            agi@agi-glaspac.com
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">Beer Bottles</a></li>
+          <li><a href="#">Liquor Bottles</a></li>
+          <li><a href="#">Wine Bottles</a></li>
+          <li><a href="#">Pharma Bottles</a></li>
+          <li><a href="#">Food Jars</a></li>
+          <li><a href="#">Soft Drink Bottles</a></li>
+          <li><a href="#">Chemical Bottles</a></li>
+          <li><a href="#">Cosmetic & Perfumery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our History</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News & Media</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Annual Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services & Links</h4>
+        <ul>
+          <li><a href="#">ACL (Applied Ceramic Label)</a></li>
+          <li><a href="#">In-House Design Studio</a></li>
+          <li><a href="#">Colouring Forehearth</a></li>
+          <li><a href="#">Quality</a></li>
+          <li><a href="#">Our Exports</a></li>
+          <li><a href="#">Regional Offices</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 AGI Glaspac. All Rights Reserved. · <a href="#" style="color:rgba(255,255,255,.3);text-decoration:none">Privacy Policy</a> · <a href="#" style="color:rgba(255,255,255,.3);text-decoration:none">Disclaimer</a></p>
+      <div class="socials">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/agi-glaspac-an-sbu-of-hsil-/" class="soc" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <!-- Twitter/X -->
+        <a href="https://x.com/AGIglaspac" class="soc" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/agiglaspac" class="soc" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/agiglaspac/" class="soc" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/channel/UCtsM4S_aSQxtJPMB70iqAxQ" class="soc" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── VIDEO LOAD HANDLER ──
+const vid = document.getElementById('hero-video');
+
+// Browsers block autoplay WITH sound — so we start muted, then try to unmute
+vid.muted = true;
+vid.play().then(() => {
+  // Try to unmute after play starts
+  vid.muted = false;
+}).catch(() => {
+  // Autoplay with sound blocked — stay muted, user can click to unmute
+  vid.muted = true;
+  document.getElementById('icon-sound-on').style.display = 'none';
+  document.getElementById('icon-muted').style.display = 'block';
+  document.getElementById('mute-label').textContent = 'Unmute';
+});
+
+vid.addEventListener('canplay', () => {
+  vid.style.opacity = '1';
+  ['hero-static-bg','hero-grid-el','orb1','orb2','orb3','hero-ring-el'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el){ el.style.transition='opacity 1.5s'; el.style.opacity='0'; }
+  });
+});
+
+// Mute / Unmute toggle
+const muteBtn = document.getElementById('mute-btn');
+muteBtn.addEventListener('click', () => {
+  vid.muted = !vid.muted;
+  document.getElementById('icon-sound-on').style.display = vid.muted ? 'none' : 'block';
+  document.getElementById('icon-muted').style.display   = vid.muted ? 'block' : 'none';
+  document.getElementById('mute-label').textContent     = vid.muted ? 'Unmute' : 'Mute';
+  muteBtn.style.borderColor = vid.muted ? 'rgba(200,16,46,0.5)' : 'rgba(255,255,255,0.18)';
+});
+muteBtn.addEventListener('mouseenter', () => muteBtn.style.background = 'rgba(0,0,0,0.65)');
+muteBtn.addEventListener('mouseleave', () => muteBtn.style.background = 'rgba(0,0,0,0.45)');
+
+// Nav scroll effect
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50));
+
+// Mobile menu
+document.getElementById('ham').addEventListener('click',()=>document.getElementById('mmenu').classList.toggle('open'));
+document.getElementById('mmenu').querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mmenu').classList.remove('open')));
+
+// Scroll reveal
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Timeline draggable scroll
+const ts=document.querySelector('.timeline-scroll');
+if(ts){
+  let isDown=false,startX,scrollLeft;
+  ts.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-ts.offsetLeft;scrollLeft=ts.scrollLeft});
+  ts.addEventListener('mouseleave',()=>isDown=false);
+  ts.addEventListener('mouseup',()=>isDown=false);
+  ts.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-ts.offsetLeft;ts.scrollLeft=scrollLeft-(x-startX)*1.5});
+}
+
+// Contact cards responsive
+const cc=document.querySelector('.contact-cards');
+if(cc&&window.innerWidth<768){cc.style.gridTemplateColumns='1fr'}
+window.addEventListener('resize',()=>{if(cc)cc.style.gridTemplateColumns=window.innerWidth<768?'1fr':'repeat(3,1fr)'});
+</script>
+</body>
+</html>
